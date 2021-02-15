@@ -148,7 +148,7 @@ function setBriefing() {
         let t3 = t2 - t1;
         if (t3 < 0) t3 += dayMS;
 
-        const channel = client.channels.get('168744024931434498');
+        const channel = client.channels.get('795750687401050142');
         // const guild = channel.guild;
 
         Util.log(`Set daily briefing for ${t3 * msToHours} hours`);
@@ -166,7 +166,7 @@ function setBriefing() {
                 title: 'Daily Briefing',
                 description: '​',
                 fields: embFields,
-                footer: { text: '>> More info in #vaebot-log <<' },
+                footer: { text: '>> More info in #LIKE ILIAX-log <<' },
                 thumbnail: { url: './resources/avatar.png' },
                 color: colGreen,
             };
@@ -198,7 +198,7 @@ function setBriefing() {
 
                 for (let i = 0; i < exports.dailyKicks.length; i++) {
                     const nowData = exports.dailyKicks[i];
-                    const userId = nowData[0];
+                    const userId = [0];
                     // const userName = nowData[1];
                     const userReason = nowData[2];
                     const targMention = `<@${userId}>`;
@@ -411,7 +411,7 @@ client.on('ready', async () => {
 
             // Music2.initGuild(newGuild);
 
-            if (newGuild.id == '477270527535480834') dbGuilds.push(newGuild);
+            if (newGuild.id == '795745846267215883') dbGuilds.push(newGuild);
         }),
     )
         .then(() => Util.log('> Cached all guild members'))
